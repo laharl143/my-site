@@ -1,0 +1,62 @@
+/* 4 types of display value: Block, Inline, Inline-Block, None */
+/* display:block is the default of paragraph */
+/* display:inline is the default of span */
+/* display:inline-block is the combination of 2 */
+/* display:none means it will consider the selector as it doesnt exist and the box and content will disappear */
+/* alternative of display:none is visibility:hidden, where it is only hidden but the box is still there  */
+/* more info on this on Section 5, Lection 45. CSS Display Property*/
+
+/****************** TAG SELECTOR ******************/
+
+/* Use the console in google chrome + pesticide extension to easily customize css just like Angela Yu taught */
+body {
+    margin-top: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+/* div {
+    background-color: #E4F9F5;
+} */
+
+h1 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+/****************** Class SELECTOR ******************/
+
+
+.top-container {
+    background-color: #E4F9F5;
+    width: 200px;
+    height: 200px;
+    border: solid 10px;
+    padding: 20px;
+
+
+}
+
+div.middle-container{
+    margin-left: 260px;
+}
+
+.middle-container {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    border: solid 20px;
+}
+
+div.bottom-container{
+    margin-left: 500px;
+}
+
+.bottom-container {
+    background-color: yellow;
+    width: 200px;
+    height: 200px;
+    border: solid 10px;
+}
+
+/****************** Id SELECTOR ******************/
