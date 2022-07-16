@@ -6,6 +6,12 @@
 /* alternative of display:none is visibility:hidden, where it is only hidden but the box is still there  */
 /* more info on this on Section 5, Lection 45. CSS Display Property*/
 
+/* Note about font-size: 16px = 100% = 1em  */
+/* 1em is equal to the current font-size of the element in question. If you haven't set font size anywhere on the page, then it would be the browser default, which is probably 16px. So by default 1em = 16px. */
+/* on the otherhand, there is a newer version of em which is called "rem". rem means it will ignore the font size of it's parent */
+/* angela yu recommends rem. because rem is the most adaptable and reliable compared to px, %, em  */
+
+
 /****************** TAG SELECTOR ******************/
 
 /* Use the console in google chrome + pesticide extension to easily customize css just like Angela Yu taught */
@@ -13,50 +19,223 @@ body {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
+    margin-bottom: 0px;
+    text-align: center; /* if you dont have height and width property, text-align: center if you want it to be centered  */
+    font-family: 'Merriweather', serif;  /* the default font-family is serif */
 }
+
 
 /* div {
     background-color: #E4F9F5;
 } */
 
 h1 {
-    margin-top: 0px;
+    font-size: 5.625rem;   /* we got this 5.625 via: 90px(size we want) / 16px(default size) = 5.625em */
+    margin-top: 25px;
     margin-bottom: 0px;
+    /* width: 20%;
+    margin: 0 auto 0 auto;  /*if you have width property, use auto if you want it to be centered  */
+    font-family: 'Sacramento', cursive;
+    color: #66BFBF;
+}
+
+h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;     /* we got this 2.5 via: 40px(size we want) / 16px(default size) = 2.5em */
+    color: #66BFBF;
+    font-weight: bold;
+}
+
+h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #11999E;
+    font-weight: 1000;
+}
+
+a {
+    color: #11999E;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 1000;
+}
+
+hr {
+    border-style: dotted none none none;
+    border-width: 5px;
+    width: 4%;
+    color: #7a8080;
+}
+
+p {
+    color: #40514E;
 }
 
 /****************** Class SELECTOR ******************/
 
+.skills {
+    margin-top: 100px;
+}
 
 .top-container {
     background-color: #E4F9F5;
-    width: 200px;
-    height: 200px;
-    border: solid 10px;
+    position: relative;
+    height: 600px;
     padding: 20px;
-
-
+    padding-top: 100px;
+    padding-bottom: 60px;
 }
 
 div.middle-container{
-    margin-left: 260px;
+    
 }
 
 .middle-container {
-    background-color: red;
-    width: 200px;
-    height: 200px;
-    border: solid 20px;
+    
 }
 
 div.bottom-container{
-    margin-left: 500px;
+    
 }
 
 .bottom-container {
-    background-color: yellow;
-    width: 200px;
-    height: 200px;
-    border: solid 10px;
+   
 }
 
+.top-cloud {
+    position: relative;
+    left: 200px ;
+    bottom: 15px;
+}
+
+.bottom-cloud {
+    position: absolute;
+}
+
+.skill-row {
+    width: 50%;
+    margin: 100px auto;
+    text-align: left;
+}
+
+.skill-row-p {
+    line-height: 2;
+}
+
+.photoshop-p {
+    position: relative;
+        left: 45px
+}
+
+.profile {
+    width: 35%;
+    margin: auto auto 100px auto;
+    line-height: 2;
+}
+
+.contact-me {
+    width: 35%;
+    margin: auto auto 100px auto;
+    line-height: 2;
+}
+
+.btn {
+    background: #11cdd4;
+    background-image: -webkit-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -moz-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -ms-linear-gradient(top, #11cdd4, #11999e);
+    background-image: -o-linear-gradient(top, #11cdd4, #11999e);
+    background-image: linear-gradient(to bottom, #11cdd4, #11999e);
+    -webkit-border-radius: 8;
+    -moz-border-radius: 8;
+    border-radius: 8px;
+    font-family: Arial;
+    color: #ffffff;
+    font-size: 20px;
+    padding: 10px 20px 10px 20px;
+    text-decoration: none;
+    font-weight: 100;
+  }
+  
+  .btn:hover {
+    background: #30e3cb;
+    background-image: -webkit-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -moz-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -ms-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: -o-linear-gradient(top, #30e3cb, #2bc4ad);
+    background-image: linear-gradient(to bottom, #30e3cb, #2bc4ad);
+    text-decoration: none;
+  }
+
+  .bottom-container {
+    background-color: #66BFBF;
+    padding: 40px;
+    margin-bot: auto 0 0 0;
+  }
+
+  .footer-link {
+    padding: 30px;
+    text-decoration: none;
+
+  }
+
+  .footer-link:hover {
+    color: white;
+  }
 /****************** Id SELECTOR ******************/
+
+#a-programmer {
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+#erskine-paris {
+    width: 250px;
+    margin: 100px auto auto; 
+}
+
+#coding-gif {
+    width: 18.5625rem;
+    position: relative;
+        bottom: 3.125em;
+    float: left;
+}
+
+#design-development {
+    margin-top: 0px;
+    
+}
+
+#simple-gif {
+    width: 10.5625rem;
+    position: relative;
+        bottom: 50px;
+        left: 30px;
+    float: right;
+}
+
+#all-rights-reserved {
+    margin-top: 50px;
+    color: #EAF6F6;
+    font-size: smaller;
+}
+
+#profile-p {
+    margin-top: 0px;
+}
+
+#get-in-touch {
+    margin-top: 100px;
+}
+
+#contact-me-p {
+    margin-bottom: 50px;
+    margin-top: 35px;
+}
+
+#second-skill-row {
+    margin-top: 140px;
+}
+
+#mountain-image {
+    width: 675px;
+}
+
